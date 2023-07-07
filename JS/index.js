@@ -47,3 +47,21 @@ function restar(){
         alert("La resta es: " + (num1-num2) )
     }
 }
+
+
+/////////// LISTA DE TAREAS /////////////////////
+function agregarTarea(){
+    const tarea = document.getElementById('tarea').value
+
+    //VALIDAR CAMPOS
+    if( tarea == ""){
+        alert("No se admiten campos en blanco")
+    }else{
+       
+        let nuevaTarea = document.createElement('li')
+        nuevaTarea.textContent = tarea
+
+        let lista = document.getElementById('lista')
+        lista.appendChild(nuevaTarea)
+    }
+}
